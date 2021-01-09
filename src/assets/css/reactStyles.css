@@ -1,0 +1,35 @@
+.headingText {
+    font-size: 32px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 0;
+    color: #124265 !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  .blueButton {
+    background: #2487ce;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+    align-items: center;
+  }
+
+
+  .validateText {
+    color: red;
+    margin: 0 0 15px 0;
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .footerAlignBottom {
+    /* position:absolute; */
+    left:0;
+    bottom:0;
+    right:0;
+
+  }
