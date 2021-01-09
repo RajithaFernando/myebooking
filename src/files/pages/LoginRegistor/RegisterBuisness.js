@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { EmaplInput, FormRow, MultiLineInput, RadioInput, ShortInput } from '../../components/InputFields';
+import { EmaplInput, FormRow, MultiLineInput, RadioInput } from '../../components/InputFields';
 
-
+import { Route, Redirect } from 'react-router-dom';
 import { Radio, Input } from 'antd';
 
 import '../../../assets/css/reactStyles.css'
+
+import store from '../../services/redux/store';
 
 class RegisterBuisness extends Component {
     constructor(props) {
@@ -13,7 +15,16 @@ class RegisterBuisness extends Component {
             buisnessCategory: 1
         };
     }
-
+    componentDidMount() {
+        const userDetails = store.getState().userDetails
+        if (!userDetails){
+            return <Redirect to="/Login" />
+        }
+        else if (userDetails.role != 'business'){
+            console.log('Hear')
+            return <Redirect to="/RegisterBuisness" />
+        }
+    }
     emailChange =(e)=>{
         e.preventDefault()
         console.log(e.target.value)
@@ -50,7 +61,7 @@ class RegisterBuisness extends Component {
                                 <p className="description">Business Name</p>
                             </div>
                             <div className="col-lg-8">
-                                <ShortInput placeholder="Your Business Name" />
+                                <Input placeholder="Your Business Name" />
                             </div>
                         </div>
 
@@ -82,14 +93,14 @@ class RegisterBuisness extends Component {
                                 <p className="description">Your Name</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput placeholder = "Your Name"/>
+                                <Input placeholder = "Your Name"/>
                             </div>
 
                             <div className="col-lg-2">
                                 <p className="description">Your Email Address</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput placeholder = "Your Email" />
+                                <Input placeholder = "Your Email" />
                             </div>
                         </div>
                         <div className="row">
@@ -97,7 +108,7 @@ class RegisterBuisness extends Component {
                                 <p className="description">Your Mobile No</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput placeholder = "7XXXXXXXX"/>
+                                <Input placeholder = "7XXXXXXXX"/>
                             </div>
 
                         </div>
@@ -109,14 +120,14 @@ class RegisterBuisness extends Component {
                                 <p className="description">Business Phone Number</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput placeholder = "7XXXXXXXX" />
+                                <Input placeholder = "7XXXXXXXX" />
                             </div>
 
                             <div className="col-lg-2">
                                 <p className="description">Business Email Address</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput placeholder = "FUCK Email" onChange={this.emailChange} />
+                                <Input placeholder = "FUCK Email" onChange={this.emailChange} />
                             </div>
                         </div>
                         <div className="row">
@@ -142,14 +153,14 @@ class RegisterBuisness extends Component {
                                 <p className="description">Facebook URL</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput />
+                                <Input />
                             </div>
 
                             <div className="col-lg-2">
                                 <p className="description">Instergram  URL</p>
                             </div>
                             <div className="col-lg-4">
-                                <ShortInput />
+                                <Input />
                             </div>
                         </div>
 

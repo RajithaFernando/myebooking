@@ -31,7 +31,7 @@ class Main extends Component {
                 <PricingSection />
                 <ContactSection />
                 
-                {/* <Footer /> */}
+                <Footer />
                 
             </>
         );

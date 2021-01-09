@@ -19,6 +19,9 @@ class RegisterUser extends Component {
 
         };
     }
+    // componentDidMount() {
+    //     store.subscribe(() => { console.log("Store Changed", store.getState()) })
+    // }
 
     userLogin = () => {
         console.log('Login')

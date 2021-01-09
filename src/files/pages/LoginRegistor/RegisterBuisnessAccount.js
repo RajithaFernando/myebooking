@@ -5,7 +5,7 @@ import '../../../assets/css/reactStyles.css'
 import { Input, Radio } from 'antd';
 
 
-import { EmaplInput, FormInput, FormRow, MultiLineInput, RadioInput, ShortInput } from '../../components/InputFields';
+
 import { validateEmail, validateName } from '../../services/ValidateFields';
 
 class RegisterBuisnessAccount extends Component {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 
 export const FormRow = () => {
@@ -12,7 +12,7 @@ export const FormRow = () => {
 export const ShortInput = ({ placeholder, }) => {
     return (
         <div className="form-group">
-            <input type="text" autocomplete="off"
+            <input type="text" autoComplete="off"
                 name="name"
                 className="form-control"
                 id="name"

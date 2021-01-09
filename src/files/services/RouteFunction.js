@@ -2,24 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
+import store from './redux/store';
+
+
 export default function RouteWrapper({
     component: Component,
     isPrivate,
     ...rest
 }) {
-    const signed = false;
+    const userDetails = store.getState().userDetails
+    let userSignedIn = false;
+    let buisnessSignedIn = false;
+    console.log(userDetails)
+    if (userDetails ){
+        userSignedIn = true
+    }
+    
     /**
      * Redirect user to SignIn page if he tries to access a private route
      * without authentication.
      */
-    if (isPrivate && !signed) {
-        return <Redirect to="/" />;
+    if (isPrivate && (!userSignedIn || !buisnessSignedIn)) {
+        
+        return <Redirect to="/Login" />;
     }
+    // if (isPrivate && (!userSignedIn || buisnessSignedIn)) {
+
+    //     return <Redirect to="/" />;
+    // }
     /**
      * Redirect user to Main page if he tries to access a non private route
      * (SignIn or SignUp) after being authenticated.
      */
-    if (!isPrivate && signed) {
+    if (!isPrivate && buisnessSignedIn) {
         return <Redirect to="/dashboard" />;
     }
     

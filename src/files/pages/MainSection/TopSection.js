@@ -9,8 +9,8 @@ const TopSection = () => {
     return (
         <div>
 
-            <div class="login-bar">
-                <a href="/Register" class="login">Login / Register</a>
+            <div className="login-bar">
+                <a href="/Register" className="login">Login / Register</a>
             </div>
 
             <section id="hero" className="d-flex align-items-center  hero">
