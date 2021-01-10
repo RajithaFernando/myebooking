@@ -22,7 +22,7 @@ export default function Routes() {
 
             
             <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBuisnessAccount} />
-            <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} isPrivate />
+            <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} />
             <RouteFunction path="/dashboard" component={Dashboard} isPrivate />
             
 

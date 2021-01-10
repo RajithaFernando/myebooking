@@ -20,10 +20,10 @@ class RegisterBuisness extends Component {
         if (!userDetails){
             // return <Redirect to="/Login" exact/>
         }
-        else if (userDetails.role != 'businesss'){
+        else if (userDetails.role != "business"){
             console.log('Hear')
             this.props.history.push("/RegisterBuisnessAccount")
-            window.location.reload(true)
+            window.location.reload()
             // return <Redirect  to="/RegisterBuisnessAccount" exact/>
         }
     }
@@ -53,7 +53,7 @@ class RegisterBuisness extends Component {
 
                         <div className="section-title">
                             <h2 className="headingText">Register Your business</h2>
-                            <p> Some Insperational Line </p>
+                            <p> Some Inspirational Line </p>
                         </div>
 
 

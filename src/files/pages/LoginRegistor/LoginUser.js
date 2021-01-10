@@ -54,7 +54,7 @@ class LoginUser extends Component {
             }
             store.dispatch(USER_LOGIN(clientData))
             this.props.history.push("/Home")
-            
+            window.location.reload()
         }
         else {
             alert('Login Failed');
@@ -68,8 +68,6 @@ class LoginUser extends Component {
         // }
         // Make API REQUEST AND RECIVE cilentData
 
-
-
     }
     render() {
         return (
@@ -78,7 +76,15 @@ class LoginUser extends Component {
                     <div className="container fade-up"
                         data-aos="fade-up"
                     >
+                        <div className="row">
+                            <div className="col-lg-1">
+                            </div>
+                            <div className="col-lg-6">
+                                <p>Don't have an Account ? <a href="/Register">Register</a></p>
+                                <br/>
+                            </div>
 
+                        </div>
 
                         <div className="row">
                             <div className="col-lg-2">

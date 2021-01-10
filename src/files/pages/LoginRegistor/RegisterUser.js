@@ -14,7 +14,7 @@ class RegisterUser extends Component {
             password: '',
             rePassword: '',
             emailError: '',
-            firstNameError:'',
+            firstNameError: '',
             role: '',
 
         };
@@ -51,7 +51,15 @@ class RegisterUser extends Component {
                     <div className="container fade-up"
                         data-aos="fade-up"
                     >
+                        <div className="row">
+                            <div className="col-lg-1">
+                            </div>
+                            <div className="col-lg-6">
+                                <p>Alredy Have an Account ? <a href="/Login">Login</a></p>
+                                <br/>
+                            </div>
 
+                        </div>
 
                         <div className="row">
                             <div className="col-lg-2">
@@ -134,7 +142,8 @@ class RegisterUser extends Component {
                         </div>
 
 
-                        <button type="submit" className="blueButton" onClick={this.userLogin}>Login</button>
+
+                        <button type="submit" className="blueButton" onClick={this.userLogin}>Register</button>
                         <br />
                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     </div>

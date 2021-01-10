@@ -34,7 +34,7 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 footer-links">
                                 <h4>Our Services</h4>
                                 <ul>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="/RegisterBuisness">Register Your Buisness</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/registerbuisness">Register Your Buisness</a></li>
                                     <li><i className="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
                                     <li><i className="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
                                     <li><i className="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
