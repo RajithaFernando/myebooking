@@ -18,11 +18,13 @@ class RegisterBuisness extends Component {
     componentDidMount() {
         const userDetails = store.getState().userDetails
         if (!userDetails){
-            return <Redirect to="/Login" />
+            // return <Redirect to="/Login" exact/>
         }
-        else if (userDetails.role != 'business'){
+        else if (userDetails.role != 'businesss'){
             console.log('Hear')
-            return <Redirect to="/RegisterBuisness" />
+            this.props.history.push("/RegisterBuisnessAccount")
+            window.location.reload(true)
+            // return <Redirect  to="/RegisterBuisnessAccount" exact/>
         }
     }
     emailChange =(e)=>{

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Redirect, Switch } from "react-router-dom";
 import RouteFunction from "./RouteFunction";
 
 import SignIn from "../pages/SignIn";
@@ -20,11 +20,16 @@ export default function Routes() {
             <RouteFunction path="/Home" exact component={Main} />
             {/* <RouteFunction path="/register" component={SignUp} /> */}
 
+            
+            <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBuisnessAccount} />
+            <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} isPrivate />
             <RouteFunction path="/dashboard" component={Dashboard} isPrivate />
-            <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} />
-            <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBuisnessAccount} isPrivate />
+            
+
             <RouteFunction path="/Register" component={RegisterUser} />
             <RouteFunction path="/Login" component={LoginUser} />
+            
+            <Redirect  to="/RegisterBuisnessAccount" exact/>
             {/* redirect user to SignIn page if route does not exist and user is not authenticated */}
             {/* <RouteFunction component={SignIn} /> */}
         </Switch>
