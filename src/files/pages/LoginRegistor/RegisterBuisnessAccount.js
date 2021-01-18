@@ -8,7 +8,7 @@ import { Input, Radio } from 'antd';
 
 import { validateEmail, validateName } from '../../services/ValidateFields';
 
-class RegisterBuisnessAccount extends Component {
+class RegisterBusinessAccount extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -75,7 +75,7 @@ class RegisterBuisnessAccount extends Component {
                             <div className="form-group col-lg-4">
                                 <Input
                                     name="email"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="Your Personal Email"
                                     onChange={this.onChangeInput}
                                 />
@@ -88,7 +88,7 @@ class RegisterBuisnessAccount extends Component {
                             <div className="form-group col-lg-4">
                                 <Input
                                     name="mobileNo"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="7X XXX XXXX"
                                     onChange={this.onChangeInput}
                                 />
@@ -105,7 +105,7 @@ class RegisterBuisnessAccount extends Component {
                             <div className="form-group col-lg-4">
                                 <Input
                                     name="firstName"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="First Name"
                                     onChange={this.onChangeInput}
                                 />
@@ -119,7 +119,7 @@ class RegisterBuisnessAccount extends Component {
                                 <Input
 
                                     name="lastName"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="Last Name"
                                     onChange={this.onChangeInput}
                                 />
@@ -134,7 +134,7 @@ class RegisterBuisnessAccount extends Component {
                             <div className="form-group col-lg-4">
                                 <Input.Password
                                     name="password"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="input password"
                                     onChange={this.onChangeInput}
                                 />
@@ -147,7 +147,7 @@ class RegisterBuisnessAccount extends Component {
                             <div className="form-group col-lg-4">
                                 <Input.Password
                                     name="rePassword"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="password"
                                     onChange={this.onChangeInput}
                                 />
@@ -164,7 +164,7 @@ class RegisterBuisnessAccount extends Component {
                                 <TextArea
                                     rows={4}
                                     name="address"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="Your Home Address"
                                     onChange={this.onChangeInput}
                                 />
@@ -179,7 +179,7 @@ class RegisterBuisnessAccount extends Component {
                                 <Input
 
                                     name="nic"
-                                    className="form-control"
+                                    className="formInput"
                                     placeholder="password"
                                     onChange={this.onChangeInput}
                                 />
@@ -202,4 +202,4 @@ class RegisterBuisnessAccount extends Component {
     }
 }
 
-export default RegisterBuisnessAccount;
+export default RegisterBusinessAccount;

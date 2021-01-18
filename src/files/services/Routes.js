@@ -8,11 +8,12 @@ import Dashboard from "../pages/Main";
 import Main from "../pages/Main";
 
 
-import RegisterBuisness from "../pages/LoginRegistor/RegisterBuisness"
-import RegisterBuisnessAccount from "../pages/LoginRegistor/RegisterBuisnessAccount";
+import RegisterBusiness from "../pages/LoginRegistor/RegisterBusiness"
+import RegisterBusinessAccount from "../pages/LoginRegistor/RegisterBuisnessAccount";
 import LoginUser from "../pages/LoginRegistor/LoginUser";
 import RegisterUser from "../pages/LoginRegistor/RegisterUser"
-import AddOpenHours from "../pages/Buisness/AddOpenHours"
+import AddOpenHours from "../pages/Business/AddOpenHours"
+import AddEmployees from "../pages/Business/AddEmployees"
 
 export default function Routes() {
     return (
@@ -21,16 +22,17 @@ export default function Routes() {
             <RouteFunction path="/Home" exact component={Main} />
             {/* <RouteFunction path="/register" component={SignUp} /> */}
 
-            
-            <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBuisnessAccount} />
-            <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} />
+
+            <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBusinessAccount} />
+            <RouteFunction path="/RegisterBuisness" component={RegisterBusiness} />
             <RouteFunction path="/dashboard" component={Dashboard} isPrivate />
             <RouteFunction path="/biz/configure/open-hours" component={AddOpenHours} />
-
+            <RouteFunction path="/biz/configure/add-employees" component={AddEmployees} />
+            
             <RouteFunction path="/Register" component={RegisterUser} />
             <RouteFunction path="/Login" component={LoginUser} />
-            
-            <Redirect  to="/RegisterBuisnessAccount"/>
+
+            <Redirect to="/RegisterBuisnessAccount" />
             {/* redirect user to SignIn page if route does not exist and user is not authenticated */}
             <RouteFunction component={SignIn} />
         </Switch>

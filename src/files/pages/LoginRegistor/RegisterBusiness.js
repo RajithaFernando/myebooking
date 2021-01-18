@@ -8,7 +8,7 @@ import '../../../assets/css/reactStyles.css'
 
 import store from '../../services/redux/store';
 
-class RegisterBuisness extends Component {
+class RegisterBusiness extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -178,4 +178,4 @@ class RegisterBuisness extends Component {
     }
 }
 
-export default RegisterBuisness;
+export default RegisterBusiness;

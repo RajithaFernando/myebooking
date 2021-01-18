@@ -294,9 +294,7 @@ class AddOpenHours extends Component {
                     >
                         <div className="section-title">
                             <h2 className="headingText">Configure Your Business</h2>
-
                             <p>Add Working Hours</p>
-
                         </div>
 
                         <Table rowKey={record => record.day} columns={columns} dataSource={data} pagination={false} />

@@ -1,34 +1,30 @@
 import React, { Component } from 'react';
 
-
 import { Input } from 'antd';
-// import Card3 from '../../components/Card3';
+
 import { validateEmail } from '../../services/ValidateFields';
-class RegisterUser extends Component {
+
+class AddEmployees extends Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
             firstName: '',
             lastName: '',
+            mobile: '',
             password: '',
             rePassword: '',
             emailError: '',
             firstNameError: '',
             role: '',
-
         };
     }
-    // componentDidMount() {
-    //     store.subscribe(() => { console.log("Store Changed", store.getState()) })
-    // }
 
-    userLogin = () => {
-        console.log('Register')
-    }
     onChangeInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value
+        }, () => {
+            console.log(this.state)
         })
         switch (e.target.name) {
             case "email":
@@ -38,12 +34,15 @@ class RegisterUser extends Component {
                 this.setState({
                     emailError: error
                 })
-                break;
-            default:
-            // NOTHING
         }
 
 
+
+
+    }
+
+    addEmployee = () => {
+        console.log('ADDED');
     }
     render() {
         return (
@@ -52,19 +51,15 @@ class RegisterUser extends Component {
                     <div className="container fade-up"
                         data-aos="fade-up"
                     >
-                        <div className="row">
-                            <div className="col-lg-1">
-                            </div>
-                            <div className="col-lg-6">
-                                <p>Already Have an Account ? <a href="/Login">Login</a></p>
-                                <br />
-                            </div>
-
+                        <div className="section-title">
+                            <h2 className="headingText">Configure Your Business</h2>
+                            <p>Add Employees to your Business</p>
                         </div>
+
 
                         <div className="row">
                             <div className="col-lg-2">
-                                <p className="description">Email Address</p>
+                                <p className="description">Employee Email Address</p>
                             </div>
                             <div className="form-group col-lg-4">
                                 <Input
@@ -77,13 +72,14 @@ class RegisterUser extends Component {
                                     this.state.emailError &&
                                     <div className="validateText">{this.state.emailError}</div>
                                 }
+
                             </div>
 
                         </div>
 
                         <div className="row">
                             <div className="col-lg-2">
-                                <p className="description">First Name</p>
+                                <p className="description">Employee First Name</p>
                             </div>
                             <div className="form-group col-lg-4">
                                 <Input
@@ -99,7 +95,7 @@ class RegisterUser extends Component {
 
                         <div className="row">
                             <div className="col-lg-2">
-                                <p className="description">Last Name</p>
+                                <p className="description">Employee Last Name</p>
                             </div>
                             <div className="form-group col-lg-4">
                                 <Input
@@ -115,13 +111,29 @@ class RegisterUser extends Component {
 
                         <div className="row">
                             <div className="col-lg-2">
-                                <p className="description">Password</p>
+                                <p className="description">Employee Mobile</p>
+                            </div>
+                            <div className="form-group col-lg-4">
+                                <Input
+                                    name="mobile"
+                                    className="formInput"
+                                    placeholder="7XXXXXXX"
+                                    onChange={this.onChangeInput}
+                                />
+                                {/* <div className="validateText">{this.state.emailError}</div> */}
+                            </div>
+
+                        </div>
+
+                        <div className="row">
+                            <div className="col-lg-2">
+                                <p className="description">Create a Password</p>
                             </div>
                             <div className="form-group col-lg-4">
                                 <Input.Password
                                     name="password"
                                     className="formInput"
-                                    placeholder="input password"
+                                    placeholder="Type password"
                                     onChange={this.onChangeInput}
                                 />
                                 {/* <div className="validateText">{this.state.emailError}</div> */}
@@ -145,17 +157,16 @@ class RegisterUser extends Component {
 
                         </div>
 
+                        <button type="submit" className="blueButton" onClick={this.addEmployee}>Add Employee</button>
 
 
-                        <button type="submit" className="blueButton" onClick={this.userLogin}>Register</button>
-                        <br />
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
                     </div>
                 </section>
-
             </div>
         );
     }
 }
 
-export default RegisterUser;
+export default AddEmployees;
