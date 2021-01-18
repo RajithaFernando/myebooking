@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // SLR
 const Footer = () => {
     return (
@@ -23,11 +23,11 @@ const Footer = () => {
                             <div className="col-lg-2 col-md-6 footer-links">
                                 <h4>Useful Links</h4>
                                 <ul>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">About us</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Services</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Terms of service</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Privacy policy</a></li>
                                 </ul>
                             </div>
 
@@ -35,10 +35,10 @@ const Footer = () => {
                                 <h4>Our Services</h4>
                                 <ul>
                                     <li><i className="bx bx-chevron-right"></i> <a href="/registerbuisness">Register Your Buisness</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                                    <li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Web Development</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Product Management</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Marketing</a></li>
+                                    <li><i className="bx bx-chevron-right"></i> <a href="/">Graphic Design</a></li>
                                 </ul>
                             </div>
 

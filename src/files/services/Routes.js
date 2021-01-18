@@ -12,6 +12,7 @@ import RegisterBuisness from "../pages/LoginRegistor/RegisterBuisness"
 import RegisterBuisnessAccount from "../pages/LoginRegistor/RegisterBuisnessAccount";
 import LoginUser from "../pages/LoginRegistor/LoginUser";
 import RegisterUser from "../pages/LoginRegistor/RegisterUser"
+import AddOpenHours from "../pages/Buisness/AddOpenHours"
 
 export default function Routes() {
     return (
@@ -24,14 +25,14 @@ export default function Routes() {
             <RouteFunction path="/RegisterBuisnessAccount" component={RegisterBuisnessAccount} />
             <RouteFunction path="/RegisterBuisness" component={RegisterBuisness} />
             <RouteFunction path="/dashboard" component={Dashboard} isPrivate />
-            
+            <RouteFunction path="/biz/configure/open-hours" component={AddOpenHours} />
 
             <RouteFunction path="/Register" component={RegisterUser} />
             <RouteFunction path="/Login" component={LoginUser} />
             
-            <Redirect  to="/RegisterBuisnessAccount" exact/>
+            <Redirect  to="/RegisterBuisnessAccount"/>
             {/* redirect user to SignIn page if route does not exist and user is not authenticated */}
-            {/* <RouteFunction component={SignIn} /> */}
+            <RouteFunction component={SignIn} />
         </Switch>
     );
 }
