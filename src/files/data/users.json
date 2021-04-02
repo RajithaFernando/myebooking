@@ -1,0 +1,32 @@
+[
+    {
+        "email": "rajithaf@gmail.com",
+        "mobileNo": "0713777113",
+        "firstName": "Rajitha",
+        "lastName": "Fernando",
+        "password": "Rajitha@123",
+        "role": "22",
+        "address": "255/8, Kerawalapitiya, Hendala, Wattala.",
+        "nic": "962472869V"
+    },
+    {
+        "email": "rajithaf@gmail.com",
+        "mobileNo": "0713777113",
+        "firstName": "Moniru",
+        "lastName": "Wijesooriya",
+        "password": "Rajitha@123",
+        "role": "22",
+        "address": "255/8, Kerawalapitiya, Hendala, Wattala.",
+        "nic": "962472869V"
+    },
+    {
+        "email": "rajithaf@gmail.com",
+        "mobileNo": "0713777113",
+        "firstName": "Pramuditha",
+        "lastName": "Kaushalya",
+        "password": "Rajitha@123",
+        "role": "22",
+        "address": "255/8, Kerawalapitiya, Hendala, Wattala.",
+        "nic": "962472869V"
+    }
+]

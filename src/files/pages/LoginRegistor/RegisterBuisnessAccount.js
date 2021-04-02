@@ -47,6 +47,9 @@ class RegisterBusinessAccount extends Component {
 
 
     }
+    onCliclCreateAccount = ()=>{
+        console.log(this.state)
+    }
 
     render() {
         const { TextArea } = Input;
@@ -190,7 +193,7 @@ class RegisterBusinessAccount extends Component {
 
 
 
-                        <button type="submit" className="blueButton">Create Account</button>
+                        <button type="submit" className="blueButton" onClick={this.onCliclCreateAccount}>Create Account</button>
 
 
                     </div>

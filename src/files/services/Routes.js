@@ -14,7 +14,7 @@ import LoginUser from "../pages/LoginRegistor/LoginUser";
 import RegisterUser from "../pages/LoginRegistor/RegisterUser"
 import AddOpenHours from "../pages/Business/AddOpenHours"
 import AddEmployees from "../pages/Business/AddEmployees"
-
+import AddServices from "../pages/Business/AddServices"
 export default function Routes() {
     return (
         <Switch>
@@ -28,7 +28,8 @@ export default function Routes() {
             <RouteFunction path="/dashboard" component={Dashboard} isPrivate />
             <RouteFunction path="/biz/configure/open-hours" component={AddOpenHours} />
             <RouteFunction path="/biz/configure/add-employees" component={AddEmployees} />
-            
+            <RouteFunction path="/biz/configure/add-services" component={AddServices} />
+
             <RouteFunction path="/Register" component={RegisterUser} />
             <RouteFunction path="/Login" component={LoginUser} />
 

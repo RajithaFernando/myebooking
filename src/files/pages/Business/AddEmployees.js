@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Input } from 'antd';
 
 import { validateEmail } from '../../services/ValidateFields';
-
+import { info, warning } from '../../components/Popups'
 class AddEmployees extends Component {
     constructor(props) {
         super(props);
@@ -43,6 +43,8 @@ class AddEmployees extends Component {
 
     addEmployee = () => {
         console.log('ADDED');
+        
+            info('Success', 'Successfully Added Employee')
     }
     render() {
         return (
